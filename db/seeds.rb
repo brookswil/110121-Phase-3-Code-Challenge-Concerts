@@ -20,5 +20,12 @@ puts "Creating Concerts..."
 # * and a concert belongs to a venue.                            *
 # ****************************************************************
 # Create concerts Here
+10.times do
+    Concert.create(
+        band_id: Band.all.sample.id,
+        venue_id: Venue.all.sample.id,
+        date: Date.new(2022, 1, 1)
+    )
+end
 
 puts "Seeding done!"
